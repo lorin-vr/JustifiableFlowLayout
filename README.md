@@ -1,3 +1,5 @@
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Florin-vr%2FJustifiableFlowLayout%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/lorin-vr/JustifiableFlowLayout) [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Florin-vr%2FJustifiableFlowLayout%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/lorin-vr/JustifiableFlowLayout)
+
 # JustifiableFlowLayout
 
 A SwiftUI layout that arranges a collection of items from left to right and top to bottom, in sequential order. 

@@ -1,6 +1,10 @@
 import SwiftUI
 
-/// A Layout that lays out its subviews left to right and top to bottom. It can use exact spacing, or justify by the width of the widest subview.
+/// A Layout that lays out its subviews left to right and top to bottom, in sequential order.  It can use exact spacing, or justify by the width of the widest subview.
+///
+/// By default it is a standard flow layout, where an exact spacing is applied between items.
+///
+/// It can also be used as a 'justified' flow layout, where the widest item determines the spacing and alignment, creating an even appearance of neat columns.
 public struct JustifiableFlowLayout: Layout {
     
     private let minSpacing: CGFloat
@@ -11,7 +15,7 @@ public struct JustifiableFlowLayout: Layout {
     ///
     /// - Parameters:
     ///   - minSpacing: The minimum spacing between subviews
-    ///   - shouldJustify: If true, the width of the widest subview is used to align the subviews giving an even, grid-like appearance
+    ///   - shouldJustify: If true, the width of the widest subview is used to align the subviews into columns
     public init(minSpacing: CGFloat, shouldJustify: Bool = false) {
         self.minSpacing = minSpacing
         self.shouldJustify = shouldJustify
