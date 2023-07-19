@@ -37,7 +37,6 @@ JustifiableFlowLayout(minSpacing: 10, shouldJustify: false) {
 
 `JustifiableFlowLayout` also works well inside a `ScrollView`.
 
-
 ## Installation
 
 ### Swift package manager
@@ -47,6 +46,15 @@ Add the swift package to your project:
 ```
 https://github.com/lorin-vr/JustifiableFlowLayout.git
 ```
+
+## Availability
+
+iOS 16.0+
+iPadOS 16.0+
+macOS 13.0+
+tvOS 16.0+
+watchOS 9.0+
+visionOS 1.0+ Beta
 
 ## Discussion
 
