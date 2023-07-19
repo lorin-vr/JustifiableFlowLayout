@@ -14,8 +14,8 @@ public struct JustifiableFlowLayout: Layout {
     /// Creates a JustifiableFlowLayout.
     ///
     /// - Parameters:
-    ///   - minSpacing: The minimum spacing between subviews
-    ///   - shouldJustify: If true, the width of the widest subview is used to align the subviews into columns
+    ///   - minSpacing: The minimum spacing between subviews. Defaults to 4.0.
+    ///   - shouldJustify: If true, the width of the widest subview is used to align the subviews into columns. If false, the `minSpacing` is applied precisely between items. Defaults to false.
     public init(minSpacing: CGFloat = 4, shouldJustify: Bool = false) {
         self.minSpacing = minSpacing
         self.shouldJustify = shouldJustify
