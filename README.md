@@ -54,12 +54,12 @@ iPadOS 16.0+
 macOS 13.0+
 tvOS 16.0+
 watchOS 9.0+
-visionOS 1.0+ Beta
+visionOS 1.0+
 
 ## Discussion
 
 `JustifiableFlowLayout` can be used as an alternative to SwiftUI collection view layouts like `Grid` and `LazyVGrid`.
 
-Unlike `LazyVGrid`, `JustifiableFlowLayout` lays out its items all at once. This potentiallys allows for more performant layout and animation, but may not be suitable for a large collection of items.
+Unlike `LazyVGrid`, `JustifiableFlowLayout` lays out its items all at once. This potentially allows for more performant layout and animation, but may not be suitable for a large collection of items.
 
 Unlike `Grid`, you don't specify the number of rows required. `JustifiableFlowLayout` will decide how many rows it needs based on the item sizes. When using `JustifiableFlowLayout`, there is no need to define `GridItem` or `GridRow`.
