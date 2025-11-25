@@ -47,11 +47,6 @@ Add the swift package to your project:
 https://github.com/lorin-vr/JustifiableFlowLayout.git
 ```
 
-## Availability
-
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Florin-vr%2FJustifiableFlowLayout%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/lorin-vr/JustifiableFlowLayout)
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Florin-vr%2FJustifiableFlowLayout%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/lorin-vr/JustifiableFlowLayout)
-
 ## Discussion
 
 `JustifiableFlowLayout` can be used as an alternative to SwiftUI collection view layouts like `Grid` and `LazyVGrid`.

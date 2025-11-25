@@ -125,58 +125,59 @@ public struct JustifiableFlowLayout: Layout {
 
 // MARK: - Previews
 
-struct JustifiableFlowLayout_Previews: PreviewProvider {
-    
+#if DEBUG
+
+enum SampleData {
     static let uniqueLetters = ["r", "s", "t", "u", "v", "w", "x", "y", "z", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     
     static let uniqueWords = ["cloud", "hill", "thunder", "if", "run", "fright", "just", "twenty", "agent", "theatre", "ink", "so", "rig", "week", "range", "today"]
-    
-    static var previews: some View {
-        
-        JustifiableFlowLayout(minSpacing: 10, shouldJustify: false) {
-            ForEach(uniqueLetters, id: \.self) { letter in
-                Text(letter)
-                    .font(.largeTitle)
-                    .padding(20)
-                    .background(Color.yellow.opacity(0.3))
-            }
-        }
-        .padding()
-        .previewDisplayName("Default, similar widths")
-        
-        JustifiableFlowLayout(minSpacing: 10, shouldJustify: true) {
-            ForEach(uniqueLetters, id: \.self) { letter in
-                Text(letter)
-                    .font(.largeTitle)
-                    .padding(20)
-                    .background(Color.yellow.opacity(0.3))
-            }
-        }
-        .padding()
-        .previewDisplayName("Justified, similar widths")
-        
-        JustifiableFlowLayout(minSpacing: 10, shouldJustify: false) {
-            ForEach(uniqueWords, id: \.self) { word in
-                Text(word)
-                    .font(.title2)
-                    .padding(20)
-                    .border(Color.mint, width: 2.5)
-            }
-        }
-        .padding()
-        .previewInterfaceOrientation(.landscapeLeft)
-        .previewDisplayName("Default, varied widths")
-        
-        JustifiableFlowLayout(minSpacing: 10, shouldJustify: true) {
-            ForEach(uniqueWords, id: \.self) { word in
-                Text(word)
-                    .font(.title2)
-                    .padding(20)
-                    .border(Color.mint, width: 2.5)
-            }
-        }
-        .padding()
-        .previewInterfaceOrientation(.landscapeLeft)
-        .previewDisplayName("Justified, varied widths")
-    }
 }
+
+#Preview("Default, similar widths") {
+    JustifiableFlowLayout(minSpacing: 10, shouldJustify: false) {
+        ForEach(SampleData.uniqueLetters, id: \.self) { letter in
+                Text(letter)
+                    .font(.largeTitle)
+                    .padding(20)
+                    .background(Color.yellow.opacity(0.3))
+            }
+        }
+        .padding()
+}
+
+#Preview("Justified, similar widths") {
+    JustifiableFlowLayout(minSpacing: 10, shouldJustify: true) {
+        ForEach(SampleData.uniqueLetters, id: \.self) { letter in
+            Text(letter)
+                .font(.largeTitle)
+                .padding(20)
+                .background(Color.yellow.opacity(0.3))
+        }
+    }
+    .padding()
+}
+
+#Preview("Default, varied widths") {
+    JustifiableFlowLayout(minSpacing: 10, shouldJustify: false) {
+        ForEach(SampleData.uniqueWords, id: \.self) { word in
+            Text(word)
+                .font(.title2)
+                .padding(20)
+                .border(Color.mint, width: 2.5)
+        }
+    }
+    .padding()
+}
+
+#Preview("Justified, varied widths") {
+    JustifiableFlowLayout(minSpacing: 10, shouldJustify: true) {
+        ForEach(SampleData.uniqueWords, id: \.self) { word in
+            Text(word)
+                .font(.title2)
+                .padding(20)
+                .border(Color.mint, width: 2.5)
+        }
+    }
+    .padding()
+}
+#endif
